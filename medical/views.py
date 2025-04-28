@@ -36,3 +36,6 @@ def simulate_exam(request):
 
     else:
         return HttpResponse("Método no permitido. Usa GET.", content_type="text/plain")
+
+def health_check(request):
+    return HttpResponse("ok")

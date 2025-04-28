@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from medical.views import simulate_exam
+from medical.views import simulate_exam, health_check
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('simulate/', simulate_exam, name='')
+    path('simulate/', simulate_exam, name=''),
+    path('health-check/', health_check),
 ]
